@@ -19,5 +19,8 @@
   "bugs": {
     "url": "https://github.com/jirenguliukang/Vue-component/issues"
   },
-  "homepage": "https://github.com/jirenguliukang/Vue-component#readme"
+  "homepage": "https://github.com/jirenguliukang/Vue-component#readme",
+  "dependencies": {
+    "vue": "^2.6.9"
+  }
 }
