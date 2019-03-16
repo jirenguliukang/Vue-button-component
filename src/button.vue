@@ -1,5 +1,4 @@
 <template>
-  <div>
     <button class="g-button"  :class="{[`icon-${iconPosition}`]: true}"
        @click="$emit('click')">
         <g-icon  class="icon" v-if="icon && !loading" :name="icon"></g-icon>
@@ -8,7 +7,6 @@
           <slot></slot>
         </div>
     </button>
-  </div>
 </template>
 <script>
 export default {
@@ -23,14 +21,14 @@ export default {
             type: String,
             default: "left",
             //属性检查器
-            validator (value) {
-                // if (value !== "left" && value !== "right"){
-                //     return false
-                // } else {
-                //     return true
-                // }
-                return !(value !== "left" && value !== "right")
-            }
+            // validator (value) {
+            //     // if (value !== "left" && value !== "right"){
+            //     //     return false
+            //     // } else {
+            //     //     return true
+            //     // }
+            //     return !(value !== "left" && value !== "right")
+            // }
         }
     }
 }
