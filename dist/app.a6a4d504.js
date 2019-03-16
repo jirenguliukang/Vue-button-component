@@ -12406,7 +12406,23 @@ exports.default = void 0;
 //
 //
 var _default = {
-  props: ["icon", "iconPosition"]
+  // props: ["icon","iconPosition"]
+  props: {
+    icon: {},
+    iconPosition: {
+      type: String,
+      default: "left",
+      //属性检查器
+      validator: function validator(value) {
+        // if (value !== "left" && value !== "right"){
+        //     return false
+        // } else {
+        //     return true
+        // }
+        return !(value !== "left" && value !== "right");
+      }
+    }
+  }
 };
 exports.default = _default;
         var $817b3e = exports.default || module.exports;
@@ -12516,7 +12532,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "54319" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "57272" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};
