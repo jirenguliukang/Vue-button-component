@@ -1,6 +1,11 @@
 <template>
     <div class="wrapper" :class="{error}">
-        <input v-bind:value="value" :disabled="disabled" :readonly="readonly" type="text">
+        <input v-bind:value="value" :disabled="disabled" :readonly="readonly" type="text"
+          @change="$emit('change',$event.target.value)"
+          @input="$emit('input',$event.target.value)"
+          @focus="$emit('focus',$event.target.value)"
+          @blur="$emit('blur',$event.target.value)"
+        >
         <template v-if="error">
             <icon name="error" class="error-icon"></icon>
             <span class="errorMessage">{{error}}</span>
@@ -55,6 +60,7 @@ export default {
         display: inline-flex;
         align-items: center;
         > :not(:last-child) {margin-left: .5em;}
+          :first-child {margin-left: 0;}
         > input {
             height: 32px;
             border: 1px solid $border-color;
